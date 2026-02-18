@@ -1,0 +1,258 @@
+// LEVEL 1 — Core OOP Foundations
+// 🧩 Exercise 1: Bank Account System
+
+// Create a BankAccount class:
+
+// Requirements:
+
+// Properties: owner, balance
+
+// Method: deposit(amount)
+
+// Method: withdraw(amount)
+
+// Method: getBalance()
+
+// Getter: formattedBalance (returns "$500.00")
+
+// Prevent negative withdrawals
+
+
+
+
+// Create 2 accounts and test them.
+
+// Bonus:
+
+// Add a static method compareAccounts(acc1, acc2) that returns the richer account.
+
+// 🧩 Exercise 2: User → Admin Inheritance
+
+// Create:
+
+// class User
+
+
+// Properties:
+
+// name
+
+// email
+
+// Methods:
+
+// login()
+
+// logout()
+
+// Now create:
+
+// class Admin extends User
+
+
+// Add:
+
+// deleteUser(user)
+
+// Override:
+
+// login() (print "Admin logged in")
+
+// Test polymorphism:
+
+// Store both Admin and User inside one array and call .login() on each.
+
+// They should behave differently.
+
+// 🧱 LEVEL 2 — Encapsulation + Private Fields
+// 🧩 Exercise 3: Car System
+
+// Create a class:
+
+// class Car
+
+
+// Properties:
+
+// brand
+
+// speed
+
+// private field #fuel
+
+// Methods:
+
+// accelerate() (+10 speed, reduce fuel)
+
+// brake() (-5 speed)
+
+// refuel(amount)
+
+// getter fuelLevel
+
+// Prevent fuel from going above 100 or below 0.
+
+// Bonus:
+
+// Make accelerate() return this for method chaining.
+
+// Example:
+
+// car.accelerate().accelerate().brake()
+
+
+
+// 🧱 LEVEL 3 — Polymorphism Deep Practice
+// 🧩 Exercise 4: Shape System
+
+// Create base class:
+
+// class Shape
+
+
+// Method:
+
+// area() → returns 0
+
+// Now create:
+
+// Rectangle
+
+// Circle
+
+// Triangle
+
+// Each overrides area() properly.
+
+// Then:
+
+// Create an array of shapes and loop over them calling area().
+
+// That’s pure polymorphism.
+
+
+
+// 🧱 LEVEL 4 — Prototypes (Very Important)
+// 🧩 Exercise 5: Constructor Function Version
+
+// Rewrite the Shape system using:
+
+// Constructor functions
+
+// Prototypes
+
+// Manual inheritance with Object.create
+
+// Example structure:
+
+// function Animal(name) {}
+// Animal.prototype.speak = function() {}
+
+
+// Then:
+
+// function Dog(name, breed) {}
+// Dog.prototype = Object.create(Animal.prototype)
+
+
+// This is where many developers get confused.
+
+// If you master this, you understand JS deeply.
+
+// 🧱 LEVEL 5 — Realistic System Design Exercise
+// 🧩 Exercise 6: Booking System (Barber Style 👀)
+
+// Create:
+
+// Base class:
+// class Appointment
+
+
+// Properties:
+
+// client
+
+// date
+
+// price
+
+// Method:
+
+// getSummary()
+
+// Now create:
+
+// HaircutAppointment
+
+// BeardAppointment
+
+// Override:
+
+// getSummary()
+
+// Then:
+
+// Store multiple appointments
+
+// Calculate total earnings
+
+// Filter appointments by date
+
+// This connects OOP to your future barber app.
+
+// 🧱 LEVEL 6 — Composition vs Inheritance
+// 🧩 Exercise 7: Gaming Characters
+
+// Create a base Character.
+
+// Instead of inheritance for skills,
+// create separate objects:
+
+// canFight
+
+// canHeal
+
+// canFly
+
+// Use composition to assign abilities.
+
+// Example:
+
+// Object.assign(character, canFight)
+
+
+// This will stretch your architectural thinking.
+
+// 🧠 Final Master Challenge
+
+// Build:
+
+// 🧩 Exercise 8: Mini E-Commerce OOP System
+
+// Classes:
+
+// Product
+
+// User
+
+// Cart
+
+// Order
+
+// Requirements:
+
+// Add product to cart
+
+// Remove product
+
+// Calculate total
+
+// Checkout (create Order)
+
+// Use inheritance for different product types
+
+// Use getters
+
+// Use static methods
+
+// Use private fields
