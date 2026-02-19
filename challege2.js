@@ -50,7 +50,7 @@ const Admin = function(name, email, role, course){
     this.course = course
 }
 
-Admin.prototype = Object.create(User);
+Admin.prototype = Object.create(User.prototype);
 
 User.prototype.login = function(){
     console.log(`${this.name} has been successfully logged in.`);
@@ -72,3 +72,34 @@ const dave = new Admin("Dave", "dave@gmail.com", "Admin");
 dave.deleteUser(user1.name);
 dave.login();
 user1.login()
+
+const PersonProto = {
+    calcAge(){
+        console.log(2037 - this.birthYear);
+    },
+
+    init(firstName, birthyear){
+        this.firstName = firstName;
+        this.birthYear = birthyear;
+    }
+}
+
+const steve  = Object.create(PersonProto);
+const Professor = Object.create(PersonProto);
+
+Professor.init = function(firstname, birthYear, course){
+    PersonProto.init.call(this, firstname, birthYear);
+    this.course = course;
+}
+const alix = Object.create(Professor);
+alix.init("Dave Son", 2000, "Computer Science")
+console.log(alix);
+
+Professor.introduce = function(){
+    console.log(`My name is ${this.firstName} 
+and I study ${this.course}`);
+}
+
+alix.introduce();
+alix.calcAge();
+

@@ -96,4 +96,4 @@ car.fuelLevel;
 newEl.accelerate();
 console.log(newEl.break());
 newEl.recharge(50);
-newEl.refuel(400)
+// newEl.refuel(400)
